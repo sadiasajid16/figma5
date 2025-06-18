@@ -1,0 +1,11 @@
+.col-md-4 img{
+    width: 140px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.main-content h1{
+    padding-top: 30px;
+}
+.main-content p{
+    padding-bottom: 30px;
+}

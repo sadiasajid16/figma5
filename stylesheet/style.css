@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* hero section starts here  */
+.nav-item a:hover{
+  color: goldenrod;
+}
+.hero {
+  background-color: #FFF8F6ff;
+  width: 100%;
+  height: auto;
+}
+.hero-content {
+  max-width: 1440px;
+  height:fit-content ;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.highlight-color {
+  color: #e7c660;
+}
+.search-wrapper{
+  width: 700px;
+}
+.search-floating{
+  width: 700px;
+}
+.search-icon-position {
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.agent-info-card {
+  bottom: -2rem;
+  margin-left: 300px;
+}
+/* hero section ends here  */
+/* categories section starts here  */
+.categories {
+  background-color: #1F4B43;
+}
+.btn-custom-gold {
+  background-color: #E7C873;
+}
+.btn-custom-gold:hover {
+  background-color: #c29311;
+}
+/* properties section starts here  */
+.city-card{
+  min-width: 200px;
+}
+.prop-heading p{
+    font-size: 14px;
+}
+.city-card {
+  border: 1px solid #dee2e6;
+  transition: 0.3s;
+}
+.city-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.city-image {
+  height: 60px;
+  min-width: 30%;
+}
+.city-properties {
+  font-size: 14px;
+  color: gray;
+}
+.scrolling-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.property-section-spacing {
+  padding-top: 10rem; 
+  padding-bottom: 6rem;
+}
+.img-overlap-1 {
+  height: 260px;
+  margin-top: -6rem;
+}
+.img-overlap-2 {
+  height: 180px;
+}
+.sale-badge-position {
+  bottom: -2rem;
+  width: 150px;
+}
+
+/* featured-properties section starts here  */
+
+.custom-badge {
+  padding: 5px 15px;
+  font-weight: 400;
+  font-size: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: gray;
+}
+.custom-badge.for-sale-color {
+  background-color: #1F4B43;
+}
+.custom-badge.featured-color { 
+  background-color: #E7C873;
+  color: #1F4B43;
+}
+.property{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+/* .select-btn.active {
+  border: 1px solid rgb(214, 214, 214);
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 50px;
+  align-items:end;
+} */
+.select-btn {
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  background-color: transparent;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.select-btn.active {
+  border: 1px solid rgb(214, 214, 214);
+  background-color:white;
+}
+.price span {
+  font-size: 12px;
+}
+.icon-text img {
+  height: 16px;
+  width: 16px;
+}
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); 
+  transform: translateY(-5px); 
+  transition: all 0.3s ease-in-out;
+}
+.card {
+  transition: all 0.3s ease-in-out; 
+}
+/* featured-properties section ends here  */
+/* property section starts here  */
+.sale-img{
+    right: 0;
+    margin-top: -60px;
+    margin-left: 75px;
+}
+.house-img{
+  height: 320px;
+}
+/* property section starts here  */
+/* working section strats here  */
+.working {
+  background-color: #FFF8F6;
+}
+.work-content {
+  padding: 60px 20px;
+}
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #f4c542;
+  margin: 0 auto 15px;
+}
+.icon-circle img {
+  width: 35px;
+  height: 26.83px;
+}
+/* working section ends here  */
+
+/* clients section starts here  */
+.clients-section-spacing {
+  margin-top: 6rem;
+}
+.client-heading h2 {
+  max-width: 60%;
+}
+/* client section ends here  */
+
+.testimonial-section {
+  background-color: #fcecec;
+}
+.testimonial-img-custom {
+  width: 200px;
+  flex-shrink: 0;
+}
+.testimonial-carousel-custom {
+  flex: 1;
+  max-width: 500px;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.testimonial-text {
+  animation: slideIn 0.5s ease;
+}
+/* testimonial section ends here  */
+
+/* logo section starts here  */
+.logos-img {
+  animation: scroll 20s linear infinite;
+}
+.logo-track {
+  gap: 100px;
+  width: max-content;
+}
+.logos-img img {
+  transition: filter 0.3s ease;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* logo section ends here  */
+
+/* agent section strats here  */
+.agent-bg {
+  background-color: #1F4B43;
+}
+
+.agent-button {
+  background-color: #e7c660;
+}
+.agent-button:hover {
+  background-color: #c29311;
+}
+/* agent section ends here  */
+/* footer section starts here  */
+.footer {
+    font-size: 12px; 
+}
+.footer-col{
+  font-size: 12px;
+}
+.subscribe-input {
+    width: 120px;
+}
+.subscribe-btn {
+    background-color: #0d3e36;
+}
+.subscribe-btn:hover {
+    background-color: #011814;
+}
+.app-store-btn {
+    height: 60px;
+}
+.app-store-btn img {
+    height: 30px;
+    width: auto;
+}
+.social-icons img:hover {
+    cursor: pointer;
+}
+/* Footer ends here  */
+/* buttons  */
+.learn-more,
+.search-btn{
+  background-color: #e7c660;
+}
+.learn-more:hover {
+  background-color: #c29311;
+}
+.search-btn:hover {
+  background-color: #c29311;
+}
+
+
+    /* responsive css  */
+   @media (max-width: 991.89px) { 
+    .search-wrapper{
+      width: 100%;
+    }
+    .search-floating{
+      width: 600px;
+      flex: 1;
+    }
+    .nav-btns button{
+      width: 100%;
+    }
+    .call-btn,
+    .profile-btn{
+      border: 1px solid gray;
+      border-radius: 50px;
+      font-size: 12px;
+    }
+    .agent-info-card {
+      position: static; 
+      margin-top: 2rem; 
+      }
+    .client-heading h2 {
+      max-width: 100%; 
+      }
+      .client-heading p {
+        max-width: 80%; 
+      } 
+      .client-heading p {
+        max-width: 100%;
+      }
+      .img-overlap-1 {
+        margin-top: 0 ; 
+      }
+      .sale-badge-position {
+        position: static;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+     @media (min-width: 767px) and (max-width:1100px) {
+       .email{
+        display: flex;
+        flex-direction: column;
+      }
+     }
+     @media (max-width: 768px) {
+      .search-wrapper{
+        width: 100%;
+      }
+      .search-floating{
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+      }
+      .search-btns{
+        width: 100%;
+      }
+      .search-btns button{
+        width: 50%;
+      }
+      .float-left{
+        display: flex;
+        width: 100%;
+      }
+      .keyword p,
+      .status p,
+      .type p{
+        display: none;
+      }
+      .keyword,
+      .status,
+      .type{
+        width: 100%;
+        flex: 1;
+        justify-content: space-between;
+        width: 100%;
+      }
+     }

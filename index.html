@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <title>Figma</title>
+</head>
+<body>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                    <a class="navbar-brand" href="/"><img src="/assets/nav-logo.png" alt="just home"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:50%;">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-5 mt-3 g-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Listings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Members</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Pages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="mt-3 nav-btns">
+                                <button type="button" class="btn mb-2 call-btn"><img src="/assets/phone.png" alt="phone" width="20px"> +68 685 88666</button>
+                                <button type="button" class="btn mb-2 profile-btn"><img src="/assets/profile.png" alt="profile" width="25px"></button>
+                                <button type="button" class="btn btn-outline-secondary property-btn rounded-5">Add Property</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-background py-5 py-lg-0 d-flex align-items-center">
+                <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center my-lg-5 gap-5 px-3">
+                    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center text-lg-start mb-5 mb-lg-0">
+                        <p class="fs-6 mb-1 text-body-secondary">From as low as $10 per day with limited time offer discounts.</p>
+                        <h1 class="display-4 fw-bold mb-3 lh-sm">Your<span class="highlight-color"> Property,</span> Our Priority.</h1>
+                        <div class="search-wrapper d-flex position-relative z-1 mt-4 w-lg-100">
+                            <div class="search-floating d-flex d-flex flex-wrap flex-md-nowrap align-items-center bg-white shadow-lg p-3 rounded-3">
+                                <div class="keyword flex-grow-1 text-start me-md-2 mb-3 mb-md-0">
+                                    <p class="small text-muted ">Keyword</p>
+                                    <div class="position-relative">
+                                        <input class="form-control border-0 px-2 mb-3" type="text" placeholder="Enter keyword">
+                                        <img class="position-absolute search-icon-position" src="/assets/header/search-icon.png" alt="Search" width="16" height="16">
+                                    </div>
+                                </div>
+
+                                <hr class="d-none d-md-block vr mx-2" style="height: 3.5rem;">
+                                <div class="float-left d-flex flex-column flex-md-row gap-3 flex-grow-1 justify-content-center">
+                                    <div class="status text-start mb-3 mb-sm-0">
+                                        <p class="small text-muted mb-1">Status</p>
+                                        <select class="form-select border-0 px-2 py-2 w-100">
+                                            <option>Status</option>
+                                            <option>All Status</option>
+                                            <option>For Rent</option>
+                                            <option>For Sale</option>
+                                        </select>
+                                    </div>
+                                    <hr class="type d-none d-md-block vr mx-2" style="height: 3.5rem;"> 
+                                    <div class="type text-start">
+                                        <p class="small text-muted mb-1">Type</p>
+                                        <select class="form-select border-0 px-2 py-2">
+                                            <option>Type</option>
+                                            <option>House</option>
+                                            <option>Villa</option>
+                                            <option>Apartment</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="search-btns d-flex gap-2 mt-3 mt-md-0 ms-md-3">
+                                    <button class="btn btn-light border text-dark-emphasis py-2 px-3 rounded-3 ">Filter</button>
+                                    <button class="btn search-btn py-2 px-3 rounded-3 text-dark fw-semibold">Search</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 d-flex flex-wrap justify-content-center justify-content-lg-start">
+                            <span class="me-2 fw-semibold text-dark">Popular Search:</span>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill me-2 mb-2">Modern Villa</button>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill me-2 mb-2">Studio Apartment</button>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill mb-2">Town House</button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5 d-none d-lg-block position-relative">
+                        <img src="/assets/header/agents.png" alt="agent" class="img-fluid rounded-3 ">
+                        <div class="position-absolute agent-info-card">
+                            <img src="/assets/header/property.png" alt="property" class="img-fluid w-75 float-right"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </section>
+    <section class="properties container mt-5">
+        <div class="properties-heading">
+            <h1>Featured Properties in the cities</h1>
+            <div class="prop-text d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a class="text-dark text-decoration-none" href="cities.html" id="openCityModal">View all cities → </a>
+            </div>
+            <div class="scrolling-wrapper mt-4 overflow-x-auto d-flex pe-3 gap-4">
+                <div class="city-card rounded-3 d-flex align-items-center">
+                    <img src="/assets/properties/prop-img1.jpg" alt="New York" class="city-image rounded-3 px-1 py-1">
+                    <div class="city-content px-2">
+                    <div class="city-title fw-semibold">New York</div>
+                    <div class="city-properties">9 Properties</div>
+                    </div>
+                </div>
+
+                <div class="city-card rounded-3 d-flex align-items-center">
+                    <img src="/assets/properties/prop-img2.jpg" alt="San Diego" class="city-image rounded-3 px-1 py-1">
+                    <div class="city-content px-2">
+                    <div class="city-title fw-semibold">San Diego</div>
+                    <div class="city-properties">1 Property</div>
+                    </div>
+                </div>
+
+                <div class="city-card rounded-3 d-flex align-items-center">
+                    <img src="/assets/properties/prop-img3.jpg" alt="Miami" class="city-image rounded-3 px-1 py-1">
+                    <div class="city-content px-2">
+                    <div class="city-title fw-semibold">Miami</div>
+                    <div class="city-properties">2 Properties</div>
+                    </div>
+                </div>
+
+                <div class="city-card rounded-3 d-flex align-items-center">
+                    <img src="/assets/properties/prop-img4.jpg" alt="Los Angeles" class="city-image rounded-3 px-1 py-1">
+                    <div class="city-content px-2">
+                        <div class="city-title fw-semibold">Los Angeles</div>
+                        <div class="city-properties">1 Property</div>
+                    </div>
+                </div>
+
+                <div class="city-card rounded-3 d-flex align-items-center">
+                    <img src="/assets/properties/prop-img5.jpg" alt="Chicago" class="city-image rounded-3 px-1 py-1 object-fit-cover">
+                    <div class="city-content px-2">
+                        <div class="city-title fw-semibold">Chicago</div>
+                        <div class="city-properties">2 Properties</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured-props mt-5 py-5">
+        <div class="featured-content container">
+            <h2 class="fs-2 mb-3">Featured Properties</h2>
+            <div class="props-text d-flex flex-column flex-md-row justify-content-md-between align-items-center mb-4">
+                <div class="text-left">
+                    <p class="mb-0 text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="props-btns align-items-center">
+                    <div class="text-right d-flex gap-3 flex-wrap align-items-center">
+                        <a class="select-btn active text-decoration-none text-dark mt-1" id="allBtn" href="#">All Properties</a>
+                        <a class="select-btn text-decoration-none text-dark mt-1" id="saleBtn" href="#">For Sale</a>
+                        <a class="select-btn text-decoration-none text-dark mt-1" id="rentBtn" href="#">For Rent</a>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-cards mt-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 for-sale"> 
+                            <div class="card-img-top-wrapper position-relative px-2 py-2">
+                                <div class="badge-container mt-2 position-absolute ms-2 d-flex z-2 gap-1">
+                                    <span class="custom-badge rounded-5 text-white for-sale-color">For Sale</span>
+                                    <span class="custom-badge rounded-5 text-white featured-color">Featured</span>
+                                </div>
+                                <img src="/assets/featured-crads/card1.jpg" class="card-img-top img-fluid object-fit-cover w-100 rounded-3" alt="Farmhouse">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-heading d-flex justify-content-between align-items-baseline mb-2">
+                                    <h5 class="card-title fw-semibold mb-0">Luxury Farm Home</h5>
+                                    <h5 class="price text-danger fw-bold mb-0">$395,000</h5>
+                                </div>
+                                <h6 class="card-text text-muted d-flex align-items-center gap-2 mb-3">
+                                    <img src="/assets/featured-crads/Vector (1).png" alt="location" class="icon-text-img"> 1800-1818 79th St
+                                </h6>
+                                <div class="card-bottom d-flex flex-wrap justify-content-between gap-3 pt-3 border-top border-light">
+                                    <div class="beds d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/beds.png" alt="beds" class="icon-text-img object-fit-contain"> 4 Beds
+                                        </p>
+                                    </div>
+                                    <div class="baths d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/bath.png" alt="baths" class="icon-text-img object-fit-contain"> 1 Baths
+                                        </p>
+                                    </div>
+                                    <div class="sqft d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/sqft.png" alt="sqft" class="icon-text-img object-fit-contain"> 400 sqft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 for-sale">
+                            <div class="card-img-top-wrapper position-relative px-2 py-2">
+                                <div class="badge-container mt-2 position-absolute ms-2 d-flex z-2 gap-1">
+                                    <span class="custom-badge rounded-5 text-white for-sale-color">For Sale</span>
+                                </div>
+                                <img src="/assets/featured-crads/card2.jpg" class="card-img-top img-fluid object-fit-cover w-100 rounded-3" alt="apartment">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-heading d-flex justify-content-between align-items-baseline mb-2">
+                                    <h5 class="card-title fw-semibold mb-0">Skyper Pool Apartment</h5>
+                                    <h5 class="price text-danger fw-bold mb-0">$280,000</h5>
+                                </div>
+                                <h6 class="card-text text-muted d-flex align-items-center gap-2 mb-3">
+                                    <img src="/assets/featured-crads/Vector (1).png" alt="location" class="icon-text-img"> 1020 Bloomingdale Ave
+                                </h6>
+                                <div class="card-bottom d-flex flex-wrap justify-content-between gap-3 pt-3 border-top border-light">
+                                    <div class="beds d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/beds.png" alt="Beds" class="icon-text-img object-fit-contain"> 4 Beds
+                                        </p>
+                                    </div>
+                                    <div class="baths d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/bath.png" alt="baths" class="icon-text-img object-fit-contain"> 2 Baths
+                                        </p>
+                                    </div>
+                                    <div class="sqft d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/sqft.png" alt="sqft" class="icon-text-img object-fit-contain"> 450 sqft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 for-sale">
+                            <div class="card-img-top-wrapper position-relative px-2 py-2">
+                                <div class="badge-container mt-2 position-absolute ms-2 d-flex z-2 gap-1">
+                                    <span class="custom-badge rounded-5 text-white for-sale-color">For Sale</span>
+                                </div>
+                                <img src="/assets/featured-crads/card3.jpg" class="card-img-top img-fluid object-fit-cover w-100 rounded-3" alt="street">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-heading d-flex justify-content-between align-items-baseline mb-2">
+                                    <h5 class="card-title fw-semibold mb-0">North Dillard Street</h5>
+                                    <h5 class="price text-danger fw-bold mb-0">$250 <span class="text-danger">/month</span></h5>
+                                </div>
+                                <h6 class="card-text text-muted d-flex align-items-center gap-2 mb-3">
+                                    <img src="/assets/featured-crads/Vector (1).png" alt="location" class="icon-text-img"> 4330 Bell Shoals Rd
+                                </h6>
+                                <div class="card-bottom d-flex flex-wrap justify-content-between gap-3 pt-3 border-top border-light">
+                                    <div class="beds d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/beds.png" alt="beds" class="icon-text-img object-fit-contain"> 4 Beds
+                                        </p>
+                                    </div>
+                                    <div class="baths d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/bath.png" alt="baths" class="icon-text-img object-fit-contain"> 2 Baths
+                                        </p>
+                                    </div>
+                                    <div class="sqft d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/sqft.png" alt="sqft" class="icon-text-img object-fit-contain"> 400 sqft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 for-rent">
+                            <div class="card-img-top-wrapper position-relative px-2 py-2">
+                                <div class="badge-container rounded-5 mt-2 position-absolute ms-2 d-flex z-2 gap-1">
+                                    <span class="custom-badge rounded-5 text-white for-sale-color">For Rent</span>
+                                    <span class="custom-badge rounded-5 text-white featured-color">Featured</span>
+                                </div>
+                                <img src="/assets/featured-crads/card4.jpg" class="card-img-top img-fluid object-fit-cover w-100 rounded-3" alt="penthouse">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-heading d-flex justify-content-between align-items-baseline mb-2">
+                                    <h5 class="card-title fw-semibold mb-0">Eaton Garth Penthouse</h5>
+                                    <h5 class="price text-danger fw-bold mb-0">$180,000</h5>
+                                </div>
+                                <h6 class="card-text text-muted d-flex align-items-center gap-2 mb-3">
+                                    <img src="/assets/featured-crads/Vector (1).png" alt="location" class="icon-text-img"> 7722 18th Ave, Brooklyn
+                                </h6>
+                                <div class="card-bottom d-flex flex-wrap justify-content-between gap-3 pt-3 border-top border-light">
+                                    <div class="beds d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/beds.png" alt="beds" class="icon-text-img object-fit-contain"> 4 Beds
+                                        </p>
+                                    </div>
+                                    <div class="baths d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/bath.png" alt="baths" class="icon-text-img object-fit-contain"> 2 Baths
+                                        </p>
+                                    </div>
+                                    <div class="sqft d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/sqft.png" alt="sqft" class="icon-text-img object-fit-contain"> 450 sqft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 for-rent">
+                            <div class="card-img-top-wrapper position-relative px-2 py-2">
+                                <div class="badge-container mt-2 position-absolute ms-2 d-flex z-2 gap-1">
+                                    <span class="custom-badge rounded-5 text-white for-sale-color">For Rent</span>
+                                    <span class="custom-badge rounded-5 text-white featured-color">Featured</span>
+                                </div>
+                                <img src="/assets/featured-crads/card5.jpg" class="card-img-top img-fluid object-fit-cover w-100 rounded-3" alt="Apartment">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-heading d-flex justify-content-between align-items-baseline mb-2">
+                                    <h5 class="card-title fw-semibold mb-0">New Apartment Nice Wiew</h5>
+                                    <h5 class="price text-danger fw-bold mb-0">$850 <span class="text-danger">/month</span></h5>
+                                </div>
+                                <h6 class="card-text text-muted d-flex align-items-center gap-2 mb-3">
+                                    <img src="/assets/featured-crads/Vector (1).png" alt="location" class="icon-text-img"> 7802 20th Ave, Brooklyn
+                                </h6>
+                                <div class="card-bottom d-flex flex-wrap justify-content-between gap-3 pt-3 border-top border-light">
+                                    <div class="beds d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/beds.png" alt="beds" class="icon-text-img object-fit-contain"> 4 Beds
+                                        </p>
+                                    </div>
+                                    <div class="baths d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/bath.png" alt="baths" class="icon-text-img object-fit-contain"> 1 Baths
+                                        </p>
+                                    </div>
+                                    <div class="sqft d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/sqft.png" alt="sqft" class="icon-text-img object-fit-contain"> 460 sqft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm border-0 rounded-4 for-rent">
+                            <div class="card-img-top-wrapper position-relative px-2 py-2">
+                                <div class="badge-container mt-2 position-absolute ms-2 d-flex z-2 gap-1">
+                                    <span class="custom-badge rounded-5 text-white for-sale-color">For Rent</span>
+                                    <span class="custom-badge rounded-5 text-white featured-color">Featured</span>
+                                </div>
+                                <img src="/assets/featured-crads/card5.jpg" class="card-img-top img-fluid object-fit-cover w-100 rounded-3" alt="Apartment">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-heading d-flex justify-content-between align-items-baseline mb-2">
+                                    <h5 class="card-title fw-semibold mb-0">Diamond Manor Apartment</h5>
+                                    <h5 class="price text-danger fw-bold mb-0">$259,000</h5>
+                                </div>
+                                <h6 class="card-text text-muted d-flex align-items-center gap-2 mb-3">
+                                    <img src="/assets/featured-crads/Vector (1).png" alt="location" class="icon-text-img"> 7802 20th Ave, Brooklyn
+                                </h6>
+                                <div class="card-bottom d-flex flex-wrap justify-content-between gap-3 pt-3 border-top border-light">
+                                    <div class="beds d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/beds.png" alt="beds" class="icon-text-img object-fit-contain"> 4 Beds
+                                        </p>
+                                    </div>
+                                    <div class="baths d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/bath.png" alt="baths" class="icon-text-img object-fit-contain"> 2 Baths
+                                        </p>
+                                    </div>
+                                    <div class="sqft d-flex align-items-center gap-1">
+                                        <p class="icon-text mb-0 fs-6 text-muted">
+                                            <img src="/assets/featured-crads/sqft.png" alt="sqft" class="icon-text-img object-fit-contain"> 500 sqft
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="working py-5"> 
+        <div class="work-content container text-center">
+            <h2 class="fs-2 mb-2 text-dark">How It works? Find a perfect home</h2>
+            <p class="subtitle fs-6 text-secondary mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div class="steps row justify-content-center g-4 gx-md-5 px-md-5">
+                <div class="col-12 col-md-4">
+                    <div class="step text-center">
+                        <div class="icon-circle rounded-circle d-flex justify-content-center align-items-center">
+                            <img class="object-fit-contain" src="/assets/working/card1.png" alt="Find Real Estate Icon" />
+                        </div>
+                        <h3 class="fs-5 mb-2 text-dark">Find Real Estate</h3>
+                        <p class="fs-6 text-muted">Sumo petentium ut per, at his wisi utinam adipiscing. Est ei graeco</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="step text-center">
+                        <div class="icon-circle rounded-circle d-flex justify-content-center align-items-center">
+                            <img class="object-fit-contain" src="/assets/working/card2.png" alt="Meet Realtor Icon" />
+                        </div>
+                        <h3 class="fs-5 mb-2 text-dark">Meet Realtor</h3>
+                        <p class="fs-6 text-muted">Sumo petentium ut per, at his wisi utinam adipiscing. Est ei graeco</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="step text-center">
+                        <div class="icon-circle rounded-circle d-flex justify-content-center align-items-center">
+                            <img class="object-fit-contain" src="/assets/working/card3.png" alt="Take The Keys Icon" />
+                        </div>
+                        <h3 class="fs-5 mb-2 text-dark">Take The Keys</h3>
+                        <p class="fs-6 text-muted">Sumo petentium ut per, at his wisi utinam adipiscing. Est ei graeco</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="property py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-center ">
+                <div class="col-12 col-lg-6 position-relative d-flex flex-column align-items-center align-items-lg-start">
+                    <div class="d-flex flex-column flex-md-row gap-3 w-100 mb-3">
+                        <img class="img-fluid rounded-3 img-overlap-1" src="/assets/property/fam.jpg" alt="family">
+                        <img class="house-img img-fluid rounded-3 img-overlap-2" src="/assets/property/house.jpg" alt="house">
+                    </div>
+                    <div class="sale-img w-100 d-flex justify-content-center justify-content-lg-start">
+                        <img class="position-absolute sale-badge-position z-1" src="/assets/property/sale.png" alt="sale">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 ps-lg-5 pt-5 pt-lg-0">
+                    <div class="mb-4">
+                        <h2 class="fs-2 fw-semibold mb-2 text-dark">Why you should work with us</h2>
+                        <p class="fs-6 text-secondary">Pellentesque egestas elementum egestas faucibus sem. Velit nunc egestas ut morbi. Leo diam diam</p>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <div class="col-12 col-sm-auto">
+                            <p class="mb-2 fs-6 text-muted d-flex align-items-center gap-2">
+                                <img src="/assets/property/__before.png" alt="before" width="16" height="16">100% Secure
+                            </p>
+                            <p class="mb-0 fs-6 text-muted d-flex align-items-center gap-2">
+                                <img src="/assets/property/__before.png" alt="before" width="16" height="16">Buy or Rent Homes
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-auto">
+                            <p class="mb-2 fs-6 text-muted d-flex align-items-center gap-2">
+                                <img src="/assets/property/__before.png" alt="before" width="16" height="16">Wide Range of Properties
+                            </p>
+                            <p class="mb-0 fs-6 text-muted d-flex align-items-center gap-2">
+                                <img src="/assets/property/__before.png" alt="before" width="16" height="16">Trusted by thousands
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn learn-more text-dark fw-semibold py-2 px-4 rounded-3 shadow-sm">Learn More  →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categories py-5">
+        <div class="categoreis-content container">
+            <h2 class="text-white fs-1 mb-3">Featured Categories</h2>
+            <div class="category-txtd-flex d-flex flex-column flex-md-row justify-content-between align-items-center text-white mb-4">
+                <p class="mb-0">Lorem ipsum dolor sit amet.</p>
+                <a href="categories.html" class="text-decoration-none text-white">View all categories 🠖</a>
+            </div>
+            <div class="category-cards">
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <div class="col">
+                        <div class="card text-center border border-light-subtle rounded-4">
+                            <img src="/assets/categories/ct-card1.png" class="ct-card-img object-fit-contain mx-auto mt-4" alt="Town House">
+                            <div class="card-body">
+                                <h5 class="card-title">Town House</h5>
+                                <p class="card-text text-muted">2 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center border border-light-subtle rounded-4">
+                            <img src="/assets/categories/ct-card2.png" class="ct-card-img object-fit-contain mx-auto mt-4" alt="Modern Villa">
+                            <div class="card-body">
+                                <h5 class="card-title">Modern Villa</h5>
+                                <p class="card-text text-muted">10 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center border border-light-subtle rounded-4">
+                            <img src="/assets/categories/ct-card3.png" class="ct-card-img object-fit-contain mx-auto mt-4" alt="Appartment">
+                            <div class="card-body">
+                                <h5 class="card-title">Appartment</h5>
+                                <p class="card-text text-muted">3 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center border border-light-subtle rounded-4">
+                            <img src="/assets/categories/ct-card4.png" class="ct-card-img object-fit-contain mx-auto mt-4" alt="Office">
+                            <div class="card-body">
+                                <h5 class="card-title">Office</h5>
+                                <p class="card-text text-muted">3 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center border border-light-subtle rounded-4">
+                            <img src="/assets/categories/ct-card5.png" class="ct-card-img object-fit-contain mx-auto mt-4" alt="Family">
+                            <div class="card-body">
+                                <h5 class="card-title">Single Family</h5>
+                                <p class="card-text text-muted">5 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clients clients-section-spacing">
+        <div class="clients-content container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <div class="client-heading mb-4">
+                            <h2 class="fs-2 fw-semibold mb-2 text-dark">Why You Should Work With Us</h2>
+                            <p class="fs-6 text-secondary pt-3">Pellentesque egestas elementum egestas faucibus sem. Velit nunc egestas ut morbi. Leo diam diam nibh eget fermentum massa pretium. Mi mauris nulla ac dictum ut mauris non.</p>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row gap-4 mb-4">
+                            <div class="rent">
+                                <h5 class="fs-5 text-dark mb-1">Buy or Rent Homes</h5>
+                                <p class="fs-6 text-muted">We sell your home at the best market price and very quickly as well.</p>
+                            </div>
+                            <div class="trusted-clients">
+                                <h5 class="fs-5 text-dark mb-1">Trusted by Thousands</h5>
+                                <p class="fs-6 text-muted">We offer you free consultancy to get a loan for your new home.</p>
+                            </div>
+                        </div>
+                        <div class="client-btn py-3">
+                            <button type="button" class="btn learn-more text-dark fw-semibold py-2 px-4 rounded-3 shadow-sm">Learn More →</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-center text-lg-start">
+                    <img src="/assets/clients/clients.jpg" alt="Clients" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="testimonial-section mt-5 py-5 px-3">
+            <div class="testimonial-content d-flex flex-wrap justify-content-center align-items-center mx-auto" style="max-width: 1000px; gap: 40px;">
+                <div class="testimonial-container position-relative d-inline-block">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal" id="videoThumbnailLink">
+                        <img src="/assets/testimonial/testimonial.png" alt="Person">
+                        <div class="play-icon position-absolute top-50 start-50 translate-middle bg-black bg-opacity-50 text-white rounded-circle p-3 cursor-pointer">
+                            <img src="/assets/testimonial/video-play-button.png" alt="playicon">
+                        </div>
+                    </a>
+                </div>
+
+                 <div id="testimonialCarousel" class="carousel slide testimonial-carousel-custom" data-bs-ride="carousel" data-bs-interval="4000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-text">
+                                <div class="quote-heading d-flex align-items-center gap-3">
+                                    <div class="quote-icon fs-4 text-warning">
+                                        <img src="/assets/testimonial/icon-test.png.png" alt="qoute-icon" style="width: 40px;">
+                                    </div>
+                                    <div class="qoute-main">
+                                        <h6 class="mb-0">Cameron Williamson</h6>
+                                        <small class="text-muted">Designer</small>
+                                    </div>
+                                </div>
+                                <p class="mt-2">
+                                    Searches for multiplexes, property comparisons, and the
+                                    loan estimator. Works great. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dores.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-text">
+                                <div class="quote-heading d-flex align-items-center gap-3">
+                                    <div class="quote-icon fs-4 text-warning">
+                                        <img src="/assets/testimonial/icon-test.png.png" alt="qoute-icon" style="width: 40px;">
+                                    </div>
+                                    <div class="qoute-main">
+                                        <h6 class="mb-0">Alex Johnson</h6>
+                                        <small class="text-muted">Realtor</small>
+                                    </div>
+                                </div>
+                                <p class="mt-2">
+                                    This platform simplified my property workflow. I love how intuitive everything feels.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-text">
+                                <div class="quote-heading d-flex align-items-center gap-3">
+                                    <div class="quote-icon fs-4 text-warning">
+                                        <img src="/assets/testimonial/icon-test.png.png" alt="qoute-icon" style="width: 40px;">
+                                    </div>
+                                    <div class="qoute-main">
+                                        <h6 class="mb-0">Taylor Smith</h6>
+                                        <small class="text-muted">Marketing Lead</small>
+                                    </div>
+                                </div>
+                                <p class="mt-2">
+                                    I've seen better conversion rates after switching to this real estate platform.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-text">
+                                <div class="quote-heading d-flex align-items-center gap-3">
+                                    <div class="quote-icon fs-4 text-warning">
+                                        <img src="/assets/testimonial/icon-test.png.png" alt="qoute-icon" style="width: 40px;">
+                                    </div>
+                                    <div class="qoute-main">
+                                        <h6 class="mb-0">Jordan Blake</h6>
+                                        <small class="text-muted">Investor</small>
+                                    </div>
+                                </div>
+                                <p class="mt-2">
+                                    It's user-friendly and helped me close deals faster than ever before.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators position-static mt-3 justify-content-center">
+                        1
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active bg-warning rounded-pill" style="width: 40px; height: 4px; margin: 0 5px;"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="bg-warning rounded-pill" style="width: 40px; height: 4px; margin: 0 5px;"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" class="bg-warning rounded-pill" style="width: 40px; height: 4px; margin: 0 5px;"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" class="bg-warning rounded-pill" style="width: 40px; height: 4px; margin: 0 5px;"></button>
+                        4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="articles py-5">
+        <div class="container text-center">
+            <div class="article-main">
+                <h2 class="mb-3">Recent Articles & News</h2>
+                <p class="fs-6 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="article-cards mt-4">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="/assets/articles/article-card1.jpg" class="card-img-top" alt="Apartment">
+                                <div class="card-body">
+                                    <p class="text-muted mb-1">Apartment . March 19,2024</p>
+                                    <h4 class="card-title fs-5 text-dark">Housing Markets That Changed the Most This Week</h4>
+                                    <a href="#" class="text-decoration-none text-dark  d-block mt-2">Read More ➞</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="/assets/articles/article-card2.jpg" class="card-img-top" alt="Apartment">
+                                <div class="card-body">
+                                    <p class="text-muted mb-1">Apartment . March 19,2024</p>
+                                    <h4 class="card-title fs-5 text-dark">Read Unvells the Best Canadian Cities for Biking</h4>
+                                    <a href="#" class="text-decoration-none text-dark fw-medium d-block mt-2">Read More ➞</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="/assets/articles/article-card3.jpg" class="card-img-top" alt="Apartment">
+                                <div class="card-body">
+                                    <p class="text-muted mb-1">Office . March 19,2024</p>
+                                    <h4 class="card-title fs-5 text-dark">10 Walkable Cities You Can Live Affordably</h4>
+                                    <a href="#" class="text-decoration-none text-dark fw-medium d-block mt-2">Read More ➞</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="/assets/articles/artcle-card4.jpg" class="card-img-top" alt="Shop">
+                                <div class="card-body">
+                                    <p class="text-muted mb-1">shop . March 19,2024</p>
+                                    <h4 class="fs-5 card-title text-dark">New Appartment Nice in the Best Canadian Cities</h4>
+                                    <a href="#" class="text-decoration-none text-dark fw-medium d-block mt-2">Read More ➞</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="logo-slider overflow-hidden py-4">
+        <div class="logo container w-100 text-center">
+            <div class="logo-txt">
+                <p class="mb-4">Thousands of world’s leading companies trust Space</p>
+            </div>
+            <div class="logos-container container overflow-hidden">
+                <div class="logos-img w-100 d-flex">
+                    <div class="logo-track d-flex">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b1.png.png" alt="Logo 1">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b2.png.png" alt="Logo 2">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b3.png.png" alt="Logo 3">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b4.png.png" alt="Logo 4">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b5.png.png" alt="Logo 5">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b1.png.png" alt="Logo 1">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b2.png.png" alt="Logo 2">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b3.png.png" alt="Logo 3">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b4.png.png" alt="Logo 4">
+                        <img class=" object-fit-contain" src="/assets/logos/Link → b5.png.png" alt="Logo 5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section class="agent-bg mt-5 py-5 text-white">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+            <div class="agent-left mb-4 mb-md-0 me-md-4">
+                <h2 class="fs-2 fw-bold mb-2">Become a Real Estate Agent</h2>
+                <p class="fs-6 opacity-75 mb-0">We only work with the best companies around the globe</p>
+            </div>
+            <div class="agent-right flex-shrink-0">
+                <button type="button" class="btn agent-button fw-semibold py-3 px-4 rounded-3 shadow-sm">Sign-in or create an account →</button>
+            </div>
+        </div>
+    </section> 
+   <footer class="bg-white text-dark py-5">
+    <div class="container">
+        <div class="d-flex justify-content-between flex-column flex-md-row  align-items-center pb-4 border-bottom">
+            <div>
+                <img src="/assets/nav-logo.png" alt="JustHome">
+            </div>
+            <div class="d-flex align-items-centerd-flex mt-2">
+                <h6 class="mb-0 me-3 fw-semibold">Follow us</h6>
+                <div class="social-icons d-flex">
+                    <img src="/assets/footer/facebook.png" alt="facebook" class="ms-3">
+                    <img src="/assets/footer/twitter.png" alt="twitter" class="ms-3">
+                    <img src="/assets/footer/instagram.png" alt="instagram" class="ms-3">
+                    <img src="/assets/footer/linked-in.png" alt="linked-in" class="ms-3">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 mb-4">
+            <div class="col-md-3">
+                <h6 class="fw-semibold">Subscribe</h6>
+                <div class="d-flex email justify-content-between">
+                    <input type="email" class="subscribe-input border-0" placeholder="Your e-mail">
+                    <button class="btn subscribe-btn rounded-5 text-white">Send  →</button>
+                </div>
+                <hr class="my-2">
+                <small class="text-muted d-block mt-2">Subscribe to our newsletter to receive our weekly feed.</small>
+            </div>
+            <div class="footer-col col-md-1">
+                <h6 class="fw-semibold">Discover</h6>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Miami</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">New York</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Chicago</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Florida</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Los Angeles</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">San Diego</a>
+            </div>
+            <div class="footer-col col-md-2">
+                <h6 class="fw-semibold">Quick Links</h6>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">About</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Contact</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">FAQ's</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Blog</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Pricing Plans</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Privacy Policy</a>
+                <a href="#" class="d-block text-dark text-decoration-none mb-2">Terms & Conditions</a>
+            </div>
+            <div class="footer-col col-md-2">
+                <h6 class="fw-semibold">Contact Us</h6>
+                <a href="mailto:hi@justhome.com" class="d-block text-dark text-decoration-none mb-2">hi@justhome.com</a>
+                <a href="tel:1234567890" class="d-block text-dark text-decoration-none mb-2">(123) 456-7890</a>
+            </div>
+            <div class="footer-col col-md-2">
+                <h6 class="fw-semibold">Our Address</h6>
+                <p class="mb-1">99 Fifth Avenue, 3rd Floor</p>
+                <p>San Francisco, CA 1980</p>
+            </div>
+            <div class="col-md-2">
+                <h6 class="fw-semibold">Get the app</h6>
+                <div class="app-store-btn bg-dark text-white d-flex align-items-center rounded-3 p-2 mb-2">
+                    <div class="apple-icon me-2">
+                        <img src="/assets/footer/applr.png" alt="apple">
+                    </div>
+                    <div class="flex-grow-1 border-start border-light ps-2">
+                        <p class="mb-0 fw-light" style="font-size: 0.7rem;">Download on the <br><strong>Apple Store</strong></p>
+                    </div>
+                </div>
+                <div class="app-store-btn bg-dark text-white d-flex align-items-center rounded-3 p-2">
+                    <div class="playstore-icon me-2">
+                        <img src="/assets/footer/playstore.png" alt="google play">
+                    </div>
+                    <div class="flex-grow-1 border-start border-light ps-2">
+                        <p class="mb-0 fw-light" style="font-size: 0.7rem;">Get it on <br><strong>Google Play</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0 text-secondary" style="font-size: 0.8rem;">Copyright &copy; 2024 _Justhome</p>
+        </div>
+    </div>
+    </footer>
+    <!-- ---modals---  -->  
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalTitle">Video Playback</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/7N4O-J3J5vc?si=_muNfJU8BAlIyJFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
